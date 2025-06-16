@@ -119,7 +119,6 @@ document.getElementById('search').addEventListener('input', function () {
   const searchTerm = this.value.toLowerCase();
   const filtered = recipes.filter(r => r.name.toLowerCase().includes(searchTerm));
   displayRecipes(filtered);
-  //subhadip
 });
 
 // Image Upload

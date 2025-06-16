@@ -9,15 +9,33 @@
 <body>
   <div class="container">
     <h1>🍲 Digital Recipe Book</h1>
+    <input type="text" id="search" placeholder="Search Recipes" />
     <form id="recipeForm">
-      <input type="text" id="name" placeholder="Recipe Name" required />
-      <textarea id="ingredients" placeholder="Ingredients" required></textarea>
-      <textarea id="instructions" placeholder="Instructions" required></textarea>
+      <div>
+        <input type="text" id="name" placeholder="Recipe Name"/>
+        <small id="name-error" style="color: red; display: none;"></small>
+      </div>
+
+      <div>
+        <textarea id="ingredients" placeholder="Ingredients"></textarea>
+        <small id="ingredients-error" style="color: red; display: none;"></small>
+      </div>
+
+      <div>
+        <textarea id="instructions" placeholder="Instructions"></textarea>
+        <small id="instructions-error" style="color: red; display: none;"></small>
+      </div>
+
+      <div>
+        <label for="image">Upload Image:</label>
+        <input type="file" id="image" accept="image/*" />
+        <br />
+        <img id="preview" src="" alt="Image Preview" width="100" style="margin-top: 10px; display: none;" />
+        <small id="image-error" style="color: red; display: none;"></small>
+      </div>
+      
       <button type="submit">Add Recipe</button>
     </form>
-
-    <input type="text" id="search" placeholder="Search Recipes" />
-
     <div id="recipesContainer"></div>
   </div>
 
